@@ -96,4 +96,4 @@ client.on('ready', () => {
 
 // THIS  MUST  BE  THIS  WAY
 
-client.login('NzI0MTkyMTc0MTYxNTI2Nzg0.Xu-VhA.UVMpsmafVN9XBgz9V8iXGaKYb6w');//BOT_TOKEN is the Client Secret
+client.login(process.env.BOT_TOKEN);
