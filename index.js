@@ -13,17 +13,14 @@ client.on('ready', () => {
  
 
 client.on('message', message => {
+    if (message.content.includes('<@!647966435716366396>')) {
 
-    if (message.content === 'ping') {
-
-       message.reply('pong');
+       message.reply('Stop pinging Ryan you idiot');
 
        }
-
 });
 
  
 
 // THIS  MUST  BE  THIS  WAY
-
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
