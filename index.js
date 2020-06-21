@@ -54,7 +54,7 @@ client.on('message', async message => {
 	if (command === 'balance'|| command === 'bal') {
 		const target = message.mentions.users.first() || message.author;
 		return message.channel.send(`<@${target.id}> has ${currency.getBalance(target.id)} sunbeam`);
-	if(command === 'claim')
+	}else if(command === 'claim'){
 		return message.channel.send(`Dm <@468388958599118848> to claim your sunbeam, you need at least 100 sunbeam`)
 	}else if (message.content.includes('<@!647966435716366396>')|| message.content.includes('<@647966435716366396>')) {
        if (!cooldowns.has(ryangei)) {
