@@ -12,6 +12,16 @@ client.on('ready', () => {
 
  
 
+client.on('voiceStateUpdate', (oldMember, vcmember) => {
+ // console.log(vcmember);
+ if(vcmember.channel !== null){
+ if(vcmember.channel.id ==='723950348359958630'){
+ memberz=vcmember.guild.members.cache.get(vcmember.id);
+ if(!memberz.roles.cache.find(r => r.id === "722195300378476554"))
+ 	memberz.voice.setChannel(null)
+}
+}
+});
 client.on('message', message => {
     if (message.content.includes('<@!647966435716366396>')) {
 
@@ -21,6 +31,4 @@ client.on('message', message => {
 });
 
  
-
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
