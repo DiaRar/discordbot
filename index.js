@@ -23,12 +23,19 @@ client.on('voiceStateUpdate', (oldMember, vcmember) => {
 }
 });
 client.on('message', message => {
+	console.log(message.content)
     if (message.content.includes('<@!647966435716366396>')) {
 
-       message.reply('Stop pinging Ryan you idiot');
+       message.reply('Stop pinging Ryan from PC you idiot');
+
+       }
+      if (message.content.includes('<@647966435716366396>')) {
+
+       message.reply('Stop pinging Ryan from your phone you idiot');
 
        }
 });
 
+ 
  
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
