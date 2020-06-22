@@ -70,7 +70,9 @@ client.on('message', async message => {
 
         if (now < expirationTime) {
             let timeleft = (expirationTime - now) / 1000
-            return message.reply(`please wait ${timeleft.toFixed(1)} before pinging getting sunbeam again`); 
+            if(timeleft/60<1) {
+            return message.reply(`please wait ${timeleft.toFixed(1)} seconds before getting sunbeam again`); 
+        }else return message.reply(`please wait ${(timeleft/60).toFixed(0)} minutes before getting sunbeam again`); 
         }
     }
     timestamps.set(message.author.id, now)
